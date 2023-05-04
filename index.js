@@ -35,6 +35,7 @@ async function getWeather(city){
     const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=73ab6e334e1f4e74bf1225335230105&q=${city}&days=7&aqi=no&alerts=no`);
     const weather = await response.json();
 
+    //Everything Below Here is filling out the HTML
     cityname.innerHTML=`${weather.location.name}, ${weather.location.region}`;
     dateTime.innerHTML=`${new Date().toLocaleString('en-US',options).replace(/^0/, '')}`
     temp.innerHTML=`${Math.round(weather.current.temp_f)}°F`;
@@ -70,15 +71,17 @@ async function getWeather(city){
     forecastDayImg.forEach((icon,i)=>{
         icon.src=`./weather/day/${weather.forecast.forecastday[i+1].day.condition.icon.split('/').pop()}`
     })
+
     loadingScreen.style.visibility = 'hidden';
     console.log(weather)
 }
 getWeather('watsonville');
 
-const newSearch = (e)=>{
+function newSearch(e){
     e.preventDefault();
     getWeather(e.target.parentNode.parentNode.querySelector("input").value);
     e.target.parentNode.parentNode.querySelector("input").value='';
     loadingScreen.style.visibility = 'visible';
 }
+
 document.getElementById('searchBtn').addEventListener('click',newSearch);
