@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="cloud-sun.svg">
+    <script src="index.js" defer></script>
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="topnav">
+        <div id="logo">
+            <img src="cloud-sun.svg">
+            <p>Weather App</p>
+        </div>
+        <div id="searchBar">
+            <input type="text" placeholder="Search City">
+            <button id="searchBtn" type="submit"><i class="uil uil-search" class="chanceOfRain"></i></button>
+        </div>
+        
+    </div>
+    <div id="loading-screen">
+        <div id="loading-circle"></div>
+    </div>
+  
+    <main id="main"class="main-container loaded"> 
+        <div id="main-city-day">
+            <h1 id="cityname"></h1>
+            <h3 id="dateTime"></h3>
+        </div>
+        
+        <div id="main-temp">
+            <div class="main-temp-d1">
+                <img id="tempImg" src="./weather/day/113.png">
+                <h1 id="temp"></h1>
+            </div>
+            <div class="main-temp-d2">
+                <h3 id="condition"></h3>
+                <h4 id="feelsLike"></h4>
+            </div>
+        </div>
+
+        <div id="main-stats">
+             <div class="main-stats-div">
+                <p class="wind">Wind</p>
+                <h2 id="wind"></h2>
+            </div>
+             <div class="main-stats-div">
+                <p class="humidity">Humidity</p>
+                <h2 id="humidity"></h2>
+            </div>
+            <div class="main-stats-div">
+                <p class="uvIndex">UV Index</p>
+                <h2 id="uvIndex"></h2>
+            </div>
+             <div class="main-stats-div">
+                <p class="cloudiness">Cloudiness</p>
+                <h2 id="cloudiness"></h2>
+            </div>
+             <div class="main-stats-div">
+                <p class="visibility">Visibility</p>
+                <h2 id="visibility"></h2>
+            </div>
+             <div class="main-stats-div">
+                <p class="chanceOfRain">Chance of Rain</p>
+                <h2 id="chanceOfRain"></h2>
+            </div>
+            <div class="main-stats-div">
+                <p class="sunrise">Sunrise</p>
+                <h2 id="sunrise"></h2>
+            </div>
+             <div class="main-stats-div">
+                <p class="sunset">Sunset</p>
+                <h2 id="sunset"></h2>
+            </div>
+        </div>
+
+        <div id="main-forecast">
+            <h1>Weekly Forecast</h1>
+
+            <div class="forecast-div-header">
+                <h4 class="forecast-head-day">Day</h4>
+                <h4 class="forecast-head-rain">Chance of Rain</h4>
+                <h4>Temperature</h4>
+                <h4 class="forecast-head-wind">Wind</h4>
+            </div>
+
+            <div class="forecast-div">
+                <div class="forecast-day">
+                    <h3 class="forecastWeekday"></h3>
+                    <img class="forecast-day-img" src="">
+                </div>
+
+                <h3 class="table-chance-of-rain"></h3>
+                <div class="forecast-temp-div">
+                    <h3 class="forecast-day-temp"></h3>
+                    <h3 class="forcast-night-temp"></h3>
+                </div>
+                <h3 class="forecast-day-wind"></h3>
+            </div>
+            <div class="forecast-div">
+                <div class="forecast-day">
+                    <h3 class="forecastWeekday"></h3>
+                    <img class="forecast-day-img" src="">
+                </div>
+
+                <h3 class="table-chance-of-rain"></h3>
+                <div class="forecast-temp-div">
+                    <h3 class="forecast-day-temp"></h3>
+                    <h3 class="forcast-night-temp"></h3>
+                </div>
+                <h3 class="forecast-day-wind"></h3>
+            </div>
+            <div class="forecast-div">
+                <div class="forecast-day">
+                    <h3 class="forecastWeekday"></h3>
+                    <img class="forecast-day-img" src="">
+                </div>
+
+                <h3 class="table-chance-of-rain"></h3>
+                <div class="forecast-temp-div">
+                    <h3 class="forecast-day-temp"></h3>
+                    <h3 class="forcast-night-temp"></h3>
+                </div>
+                <h3 class="forecast-day-wind"></h3>
+            </div>
+            <div class="forecast-div">
+                <div class="forecast-day">
+                    <h3 class="forecastWeekday"></h3>
+                    <img class="forecast-day-img" src="">
+                </div>
+
+                <h3 class="table-chance-of-rain"></h3>
+                <div class="forecast-temp-div">
+                    <h3 class ="forecast-day-temp"></h3>
+                    <h3 class="forcast-night-temp"></h3>
+                </div>
+                <h3 class="forecast-day-wind"></h3>
+            </div>
+            <div class="forecast-div">
+                <div class="forecast-day">
+                    <h3 class="forecastWeekday"></h3>
+                    <img class="forecast-day-img" src="">
+                </div>
+
+                <h3 class="table-chance-of-rain"></h3>
+                <div class="forecast-temp-div">
+                    <h3 class="forecast-day-temp"></h3>
+                    <h3 class="forcast-night-temp"></h3>
+                </div>
+                <h3 class="forecast-day-wind"></h3>
+            </div>
+            <div class="forecast-div last-div">
+                <div class="forecast-day">
+                    <h3 class="forecastWeekday"></h3>
+                    <img class="forecast-day-img" src="">
+                </div>
+
+                <h3 class="table-chance-of-rain"></h3>
+                <div class="forecast-temp-div">
+                    <h3 class ="forecast-day-temp"></h3>
+                    <h3 class="forcast-night-temp"></h3>
+                </div>
+                <h3 class="forecast-day-wind"></h3>
+            </div>
+        </div>
+
+        <h3 id="builtby"><span>Built By</span> 
+            <a href="https://azaelreyes.netlify.app/" target="_blank">Azael Reyes-Morales</a> 
+            <span>|</span>
+            <a target="_blank" href="https://github.com/azaelreyes?tab=repositories"><i class="uil uil-github"></i></a>
+            <a target="_blank" href="https://www.linkedin.com/in/azaelrm/"><i class="uil uil-linkedin"></i></a>
+    </main>
+    
+    
+</body>
+</html>
