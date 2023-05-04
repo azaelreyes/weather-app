@@ -32,7 +32,7 @@ const forecastWind = document.querySelectorAll('.forecast-day-wind')
 const forecastDayImg = document.querySelectorAll('.forecast-day-img')
 
 async function getWeather(city){
-    const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=73ab6e334e1f4e74bf1225335230105&q=${city}&days=7&aqi=no&alerts=no`);
+    const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=73ab6e334e1f4e74bf1225335230105&q=${city}&days=7&aqi=no&alerts=no`);
     const weather = await response.json();
 
     cityname.innerHTML=`${weather.location.name}, ${weather.location.region}`;
